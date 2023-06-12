@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        docker :'docker'
+    }
     environment{
         DOCKERHUB_USERNAME = 'achref2h'
         DOCKERHUB_PASSWORD = 'achreflolh1bli'
