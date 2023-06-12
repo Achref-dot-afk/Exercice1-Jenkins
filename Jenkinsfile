@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Building the image'){
             steps{
-                sh' docker build -t $DOCKERHUB_USERNAME/my-docker-image .'
+                sh' docker build -t $DOCKERHUB_USERNAME/my-docker-image:lts .'
                 echo 'Image built successfully'
             }
         
