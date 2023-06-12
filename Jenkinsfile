@@ -1,8 +1,8 @@
 pipeline{
     agent any
     environment{
-        DOCKERHUB_USERNAME = credentials('dockerhub-username')
-        DOCKERHUB_PASSWORD = credentials('dockerhub-password')
+        DOCKERHUB_USERNAME = 'achref2h'
+        DOCKERHUB_PASSWORD = 'achreflolh1bli'
     }
     stages{
         stage('Logging in to Docker Hub'){
