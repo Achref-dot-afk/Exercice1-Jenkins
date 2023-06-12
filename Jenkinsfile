@@ -5,12 +5,6 @@ pipeline{
         DOCKERHUB_PASSWORD = credentials('dockerhub-password')
     }
     stages{
-        stage('Logging in to Docker Hub'){
-            steps{
-                sh' docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
-                echo ' Logged in successfully '
-            }
-        }
         stage('Building the image'){
             steps{
                 sh' docker build -t $DOCKERHUB_USERNAME/my-docker-image:lts .'
