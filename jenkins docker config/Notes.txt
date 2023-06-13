@@ -1,0 +1,3 @@
+ docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -u 0:0 my-jenkins
+--> By specifying the UID and GID as 0 in the -u option, the Jenkins container will run with the root user and group permissions, allowing it to access the Docker socket owned by root. This should resolve the "permission denied" error and enable Jenkins to connect to the Docker socket successfully.
+--> All that process of the Dockerfile is to configure the jenkins image to connect to the docker daemon in order to let the container environment able to use docker CLI. 
